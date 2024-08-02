@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Megic Eight Ball</title>
+  <style>
+    html, body {
+      font-family: Arial, sans-serif;
+      background-color: #9ac5f4;
+      height: 100%;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Welcome to the Megic Eight Ball</h1>
+  <p>Press F5 to ask any questions.</p>
+  <script>
+    let input
+    const returnMessages = [
+      "Without a doubt",
+      "Yes, definitely",
+      "You may rely on it",
+      "As I see it, yes",
+      "Most likely",
+      "Yes",
+      "Signs point to yes",
+      "Don't count on it",
+      "My reply is no",
+      "My sources say no",
+      "Outlook not so good",
+      "Very doubtful"
+    ];
+
+    while(true){
+      input = prompt("Ask a yes or no question. If you are done enter stop.");
+      if(input === null){
+        break;
+      } else {
+        if(input === "stop" || input === "Stop"){
+          break;
+        }
+        let ans = returnMessages[Math.floor(Math.random() * returnMessages.length)];
+        alert(ans);
+      } 
+    }
+
+  </script>
+</body>
+
+</html>
